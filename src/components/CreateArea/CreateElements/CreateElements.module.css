@@ -1,0 +1,85 @@
+/* CreateTitle */
+.createTitle {
+  border: none;
+  background-color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 4px 4px 0px 4px;
+  padding: 3px 6px;
+}
+.createTitle:focus {
+  outline: none;
+}
+
+/* CreateEmoji */
+.createEmoji {
+  font-size: 0.9rem;
+}
+
+/* CreatePeriod */
+.createPeriod {
+  display: flex;
+}
+.createPeriod input[type="radio"] {
+  display: none;
+}
+.createPeriod label {
+  color: white;
+  color: black;
+  font-size: 0.8rem;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  margin: 4px 4px 0px 4px;
+  padding: 3px 6px;
+}
+.createPeriod input[type="radio"]:checked + label {
+  background-color: #dedede;
+  opacity: 0.8;
+}
+
+/* CreateGoal */
+.createGoal {
+  display: flex;
+  align-items: center;
+}
+.createGoal input[type="number"] {
+  margin: 4px 8px 0px 4px;
+  padding: 2px;
+  width: 32px;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+.createGoal input[type="number"]:focus {
+  outline: none;
+}
+.createGoal input[type="number"]::-webkit-outer-spin-button,
+.createGoal input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.createGoal p {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* CreateColor */
+.createColor {
+  display: flex;
+}
+.createColor input[type="radio"] {
+  display: none;
+}
+.createColor label {
+  width: 48px;
+  height: 22px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 4px 4px 0px 4px;
+}
+.createColor input[type="radio"]:checked + label {
+  opacity: 0.6;
+}

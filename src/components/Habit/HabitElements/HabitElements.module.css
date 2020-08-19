@@ -1,0 +1,43 @@
+/* HabitTitleDescription */
+.habitTitleDescription {
+  display: flex;
+  flex-direction: column;
+}
+.habitTitleDescription h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.habitTitleDescription p {
+  font-size: 0.8rem;
+  color: #f7f5f7;
+}
+
+/* HabitCounter */
+.habitCounter {
+  display: flex;
+  align-items: center;
+}
+.habitCounter p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+.habitIncreaseDecrease {
+  display: flex;
+  flex-direction: column;
+}
+.countButton:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* HabitInformation */
+.habitInformation {
+  padding: 0.8rem 1.5rem;
+  width: 480px;
+  border-radius: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+.habitInformation {
+  position: relative;
+}

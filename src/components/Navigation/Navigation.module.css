@@ -1,0 +1,18 @@
+/* Navigation Buttons */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+  height: 30.4px;
+}
+.navigation button {
+  width: 150px;
+  font-weight: 600;
+  background-color: #dedede;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.navigation button:focus {
+  outline: none;
+}

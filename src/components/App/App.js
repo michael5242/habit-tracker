@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import styles from "./App.module.css";
 
-import CreateArea from "./CreateArea";
-import Habit from "./Habit";
-import NavigationButtons from "./NavigationButtons";
+import CreateArea from "../CreateArea/CreateArea";
+import Habit from "../Habit/Habit";
+import Navigation from "../Navigation/Navigation";
 
 import Dialog from "@material-ui/core/Dialog";
 import Snackbar from "@material-ui/core/Snackbar";
@@ -11,7 +12,6 @@ import MuiAlert from "@material-ui/lab/Alert";
 function App() {
   const [openHabit, setOpenHabit] = useState(false);
   const [isOpenSnackbar, setOpenSnackbar] = useState(false);
-  // Habit List
   const [habitList, setHabitList] = useState([
     {
       title: "WAKE UP EARLY",
@@ -62,9 +62,9 @@ function App() {
   }
 
   return (
-    <>
+    <div className={styles.app}>
       <h1>HABIT TRACKER</h1>
-      <NavigationButtons setOpenHabit={setOpenHabit} />
+      <Navigation setOpenHabit={setOpenHabit} />
 
       <Dialog
         PaperProps={{
@@ -76,6 +76,7 @@ function App() {
       >
         <CreateArea addHabit={addHabit} setOpenHabit={setOpenHabit} />
       </Dialog>
+
       {habitList.map((habitItem, index) => (
         <Habit key={index} id={index} {...habitItem} setCount={setCount} />
       ))}
@@ -95,7 +96,7 @@ function App() {
           New habit created!
         </MuiAlert>
       </Snackbar>
-    </>
+    </div>
   );
 }
 

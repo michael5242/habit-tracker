@@ -1,22 +1,23 @@
 import React from "react";
+import styles from "./CreateElements.module.css";
 
-function CreateAreaGoal(props) {
+const CreateGoal = (props) => {
   const periodString =
     props.period === "DAILY" ? "DAY" : props.period.slice(0, -2);
 
   return (
-    <div className="create-goal">
+    <div className={styles.createGoal}>
       <input
         type="number"
         value={props.goal}
         onChange={(ev) =>
-          props.setAttribute("goal", ev.target.value > 0 ? ev.target.value : "")
+          props.setValue(ev.target.value > 0 ? ev.target.value : "")
         }
         min={0}
       />
       <p>TIMES PER {periodString}</p>
     </div>
   );
-}
+};
 
-export default CreateAreaGoal;
+export default CreateGoal;
