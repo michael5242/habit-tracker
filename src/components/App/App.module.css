@@ -5,3 +5,18 @@
   margin: 3rem 0px;
   text-align: center;
 }
+
+.mainContainer {
+  position: relative;
+}
+.createAreaContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+.habitListContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

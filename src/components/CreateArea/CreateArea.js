@@ -33,9 +33,8 @@ function CreateArea(props) {
   function handleClick(ev) {
     // Add new habit if all inputs filled
     if (newHabit.title !== "" && newHabit.goal > 0) {
-      props.addHabit(newHabit);
+      props.handleFinishCreateHabit(newHabit);
       setNewHabit({ ...DEFAULT_NEW_HABIT });
-      props.setOpenHabit(false);
     }
     ev.preventDefault();
   }
@@ -44,7 +43,6 @@ function CreateArea(props) {
     <div className={styles.createArea}>
       <h2>CREATE</h2>
       <form>
-        {/* Create Title */}
         <div className={styles.createGroup}>
           <p>NAME YOUR HABIT</p>
           <CreateTitle
@@ -97,7 +95,7 @@ function CreateArea(props) {
         <Zoom in={true}>
           <Fab
             className={styles.clearHabitIcon}
-            onClick={() => props.setOpenHabit(false)}
+            onClick={() => props.handleCancelCreateHabit()}
             color="secondary"
           >
             <ClearIcon />
