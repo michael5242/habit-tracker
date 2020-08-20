@@ -1,22 +1,36 @@
 /* Title */
+.app {
+  margin: 2rem;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
 .app h1 {
   font-size: 2rem;
   font-weight: 700;
   margin: 3rem 0px;
   text-align: center;
 }
-
 .mainContainer {
   position: relative;
+  width: 480px;
 }
 .createAreaContainer {
   position: absolute;
-  top: 0px;
-  left: 0px;
   opacity: 0;
 }
 .habitListContainer {
   position: absolute;
-  top: 0px;
-  left: 0px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 1rem;
+  }
+  .mainContainer {
+    width: 90vw;
+  }
 }

@@ -16,3 +16,12 @@
 .navigation button:focus {
   outline: none;
 }
+
+@media (max-width: 600px) {
+  .navigation {
+    width: 90vw;
+  }
+  .navigation button {
+    width: 31%;
+  }
+}

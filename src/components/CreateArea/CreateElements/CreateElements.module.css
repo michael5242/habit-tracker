@@ -2,39 +2,52 @@
 .createTitle {
   border: none;
   background-color: white;
-  font-size: 0.9rem;
   font-weight: 500;
+  font-size: 0.9rem;
+  width: 320px;
   border-radius: 5px;
-  margin: 4px 4px 0px 4px;
-  padding: 3px 6px;
+  margin-top: 8px;
+  margin-left: 4px;
+  padding: 4px 8px;
 }
 .createTitle:focus {
   outline: none;
 }
 
 /* CreateEmoji */
-.createEmoji {
+.createEmoji p {
+  display: inline-block;
+  background-color: white;
+  font-weight: 500;
   font-size: 0.9rem;
+  width: auto;
+  display: relative;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-left: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
 }
 
 /* CreatePeriod */
 .createPeriod {
   display: flex;
+  margin-top: 8px;
 }
 .createPeriod input[type="radio"] {
   display: none;
 }
 .createPeriod label {
-  color: white;
   color: black;
-  font-size: 0.8rem;
-  border: 2px solid #dedede;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: white;
   border-radius: 5px;
-  margin: 4px 4px 0px 4px;
-  padding: 3px 6px;
+  margin: 0px 4px;
+  padding: 4px 8px;
+  cursor: pointer;
 }
 .createPeriod input[type="radio"]:checked + label {
-  background-color: #dedede;
   opacity: 0.8;
 }
 
@@ -42,9 +55,11 @@
 .createGoal {
   display: flex;
   align-items: center;
+  margin-top: 8px;
 }
 .createGoal input[type="number"] {
-  margin: 4px 8px 0px 4px;
+  margin-right: 8px;
+  margin-left: 4px;
   padding: 2px;
   width: 32px;
   border: 2px solid #dedede;
@@ -62,23 +77,25 @@
 }
 .createGoal p {
   color: black;
-  font-size: 0.8rem;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 /* CreateColor */
 .createColor {
   display: flex;
+  margin-top: 8px;
 }
 .createColor input[type="radio"] {
   display: none;
 }
 .createColor label {
-  width: 48px;
+  flex-grow: 1;
   height: 22px;
   border: 2px solid white;
   border-radius: 5px;
-  margin: 4px 4px 0px 4px;
+  margin: 0px 4px;
+  cursor: pointer;
 }
 .createColor input[type="radio"]:checked + label {
   opacity: 0.6;

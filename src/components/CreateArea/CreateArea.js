@@ -30,78 +30,79 @@ function CreateArea(props) {
   }
 
   // Handle add button click
-  function handleClick(ev) {
-    // Add new habit if all inputs filled
+  function handleAddClick() {
     if (newHabit.title !== "" && newHabit.goal > 0) {
       props.handleFinishCreateHabit(newHabit);
       setNewHabit({ ...DEFAULT_NEW_HABIT });
     }
-    ev.preventDefault();
+  }
+
+  // Handle cancel button click
+  function handleCancelClick() {
+    props.handleCancelCreateHabit();
+    setNewHabit({ ...DEFAULT_NEW_HABIT });
   }
 
   return (
     <div className={styles.createArea}>
       <h2>CREATE</h2>
-      <form>
-        <div className={styles.createGroup}>
-          <p>NAME YOUR HABIT</p>
-          <CreateTitle
-            title={newHabit.title}
-            setValue={(val) => setAttribute("title", val)}
-          />
-        </div>
+      <div className={styles.createGroup}>
+        <p>NAME YOUR HABIT</p>
+        <CreateTitle
+          title={newHabit.title}
+          setValue={(val) => setAttribute("title", val)}
+        />
+      </div>
 
-        <div className={styles.createGroup}>
-          <p>SET AN EMOJI</p>
-          <CreateEmoji
-            emoji={newHabit.emoji}
-            setValue={(val) => setAttribute("emoji", val)}
-          />
-        </div>
-        <div className={styles.createGroup}>
-          <p>CHOOSE A PERIOD</p>
-          <CreatePeriod
-            period={newHabit.period}
-            setValue={(val) => setAttribute("period", val)}
-          />
-        </div>
-        <div className={styles.createGroup}>
-          <p>SET YOUR GOAL</p>
-          <CreateGoal
-            period={newHabit.period}
-            goal={newHabit.goal}
-            setValue={(val) => setAttribute("goal", val)}
-          />
-        </div>
-        <div className={styles.createGroup}>
-          <p>CUSTOMISE THE COLOUR</p>
-          <CreateColor
-            color={newHabit.color}
-            setValue={(val) => setAttribute("color", val)}
-          />
-        </div>
-
-        {/* Add/Cancel Buttons - Material UI Package */}
-        <Zoom in={true}>
-          <Fab
-            className={styles.addHabitIcon}
-            type="submit"
-            onClick={handleClick}
-            color="primary"
-          >
-            <AddIcon />
-          </Fab>
-        </Zoom>
-        <Zoom in={true}>
-          <Fab
-            className={styles.clearHabitIcon}
-            onClick={() => props.handleCancelCreateHabit()}
-            color="secondary"
-          >
-            <ClearIcon />
-          </Fab>
-        </Zoom>
-      </form>
+      <div className={styles.createGroup}>
+        <p>SET AN EMOJI</p>
+        <CreateEmoji
+          emoji={newHabit.emoji}
+          setValue={(val) => setAttribute("emoji", val)}
+        />
+      </div>
+      <div className={styles.createGroup}>
+        <p>CHOOSE A PERIOD</p>
+        <CreatePeriod
+          period={newHabit.period}
+          setValue={(val) => setAttribute("period", val)}
+        />
+      </div>
+      <div className={styles.createGroup}>
+        <p>SET YOUR GOAL</p>
+        <CreateGoal
+          period={newHabit.period}
+          goal={newHabit.goal}
+          setValue={(val) => setAttribute("goal", val)}
+        />
+      </div>
+      <div className={styles.createGroup}>
+        <p>CUSTOMISE THE COLOUR</p>
+        <CreateColor
+          color={newHabit.color}
+          setValue={(val) => setAttribute("color", val)}
+        />
+      </div>
+      {/* Add/Cancel Buttons - Material UI Package */}
+      <Zoom in={true}>
+        <Fab
+          className={styles.addHabitIcon}
+          type="submit"
+          onClick={handleAddClick}
+          color="primary"
+        >
+          <AddIcon />
+        </Fab>
+      </Zoom>
+      <Zoom in={true}>
+        <Fab
+          className={styles.clearHabitIcon}
+          onClick={handleCancelClick}
+          color="secondary"
+        >
+          <ClearIcon />
+        </Fab>
+      </Zoom>
     </div>
   );
 }

@@ -11,11 +11,7 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  margin: 2rem;
   background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 html::-webkit-scrollbar {
   display: none;

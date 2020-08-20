@@ -11,3 +11,12 @@
   width: 480px;
   border-radius: 0.5rem;
 }
+
+@media (max-width: 600px) {
+  .habit {
+    width: 90vw;
+  }
+  .habitTile {
+    width: 90vw;
+  }
+}

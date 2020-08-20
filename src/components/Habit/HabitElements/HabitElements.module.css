@@ -26,6 +26,9 @@
   display: flex;
   flex-direction: column;
 }
+.countButton {
+  /* transition: color 0.3s ease-in-out; FIX THIS*/
+}
 .countButton:hover {
   color: white;
   cursor: pointer;
@@ -34,7 +37,6 @@
 /* HabitInformation */
 .habitInformation {
   padding: 0.8rem 1.5rem;
-  width: 480px;
   border-radius: 0.5rem;
   margin: 1rem 0 0 0;
 }

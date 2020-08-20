@@ -104,7 +104,10 @@ function App() {
   return (
     <div className={styles.app}>
       <h1>HABIT TRACKER</h1>
-      <Navigation handleOpenCreateHabit={handleOpenCreateHabit} />
+      <Navigation
+        isOpenCreateHabit={isOpenCreateHabit}
+        handleOpenCreateHabit={handleOpenCreateHabit}
+      />
 
       {/* Main - Habit List & Create Habit */}
       <div className={styles.mainContainer}>
